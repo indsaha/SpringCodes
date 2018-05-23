@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd
+		http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-4.3.xsd">
+
+	<!-- <bean class="demo.service.WalletServiceImp" name="service">
+		<constructor-arg ref="repo">
+        
+		</constructor-arg>
+	</bean> -->
+	<context:annotation-config>
+	
+	
+	</context:annotation-config>
+	<context:component-scan base-package="demo.service"></context:component-scan>
+	
+	<!-- <bean class="demo.repo.WalletRepoImp" name="repo">
+		<constructor-arg ref="map">
+			
+		</constructor-arg>
+	</bean> -->
+	
+	<context:annotation-config>
+	
+	</context:annotation-config>
+	<context:component-scan base-package="demo.repo"></context:component-scan>
+	
+	
+	<util:map key-type="String" value-type="Customer" id="map"></util:map>
+
+</beans>
